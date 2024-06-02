@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_beranda"
+        android:icon="@drawable/beranda"
+        android:title="Beranda"
+        android:background="@drawable/menu_item_bg" />
+    <item
+        android:id="@+id/menu_forum"
+        android:icon="@drawable/baseline_forum_24"
+        android:title="Forum"
+        android:background="@drawable/menu_item_bg" />
+    <item
+        android:id="@+id/menu_akun"
+        android:icon="@drawable/akun"
+        android:title="Akun"
+        android:background="@drawable/menu_item_bg" />
+</menu>
