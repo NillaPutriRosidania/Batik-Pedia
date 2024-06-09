@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_berita"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8ecc2"
+    tools:context="com.example.capstone.ui.DetailBeritaActivity">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back_arrow" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        android:padding="16dp"
+        app:cardBackgroundColor="#D7A86E">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rabu, 15 Mei 2024"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_margin="8dp"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:shapeAppearanceOverlay="@style/circleImageView"
+                android:scaleType="centerCrop"
+                android:src="@drawable/berita" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Geblek Renteng"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Batik geblek renteng merupakan motif batik yang menyerupai bentuk makanan khas Kulon Progo. Bentuknya berupa pola angka delapan. Geblek makanan olahan dari singkong dan merupakan satu makanan khas yang menjadi identitas Kulon Progo, sementara renteng berarti rentengan atau ikatan satu sama lain saat digoreng. Motif geblek renteng adalah motif batik dari hasil lomba desain batik khas Kulonprogo yang diadakan tahun 2012 lalu. Saat ini motif ini semakin populer setelah pada hari-hari tertentu seluruh pegawai di Pemkab Kulon Progo dan siswa sekolah diwajibkan untuk memakainya. Dampaknya perajin batik di sentra batik Kecamatan Lendah omzetnya naik cukup signifikan."
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

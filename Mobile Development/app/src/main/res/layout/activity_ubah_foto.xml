@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:drawableTop="@drawable/baseline_file_upload_24"
+        android:drawableTop="@drawable/ic_file_upload"
         android:gravity="center"
         android:text="Upload"
         app:layout_constraintEnd_toEndOf="parent"

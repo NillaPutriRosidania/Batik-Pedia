@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BatikPedia</string>
+    <string name="login">Not register yet ?</string>
+    <string name="register">Have Account ? </string>
 </resources>

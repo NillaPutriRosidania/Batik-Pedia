@@ -3,6 +3,7 @@ package com.nilla.batikpedia
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.capstone.ui.HomeActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class akun : AppCompatActivity() {
@@ -18,7 +19,7 @@ class akun : AppCompatActivity() {
         bottomNavView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_beranda -> {
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
                 R.id.menu_forum -> {

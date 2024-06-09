@@ -45,7 +45,7 @@
             android:id="@+id/editTextTextEmailAddress"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_email_24"
+            android:drawableStart="@drawable/ic_email"
             android:drawablePadding="8dp"
             android:ems="10"
             android:hint="Email Address"
