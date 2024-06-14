@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_primary"
-    tools:context="com.example.capstone.ui.RegisterActivity">
+    tools:context=".ui.RegisterActivity">
 
     <ImageView
         android:id="@+id/ivRegister"
@@ -63,6 +63,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/edit_text"
         android:drawableStart="@drawable/ic_password"
+        android:drawableEnd="@drawable/ic_eye"
         android:drawablePadding="10dp"
         android:hint="Masukkan Password"
         android:inputType="textPassword"

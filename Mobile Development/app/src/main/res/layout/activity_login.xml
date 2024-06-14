@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_primary"
-    tools:context="com.example.capstone.ui.LoginActivity">
+    tools:context=".ui.LoginActivity">
 
     <ImageView
         android:id="@+id/ivLogin"
@@ -49,6 +49,7 @@
         android:layout_marginRight="30dp"
         android:hint="Masukkan Password"
         android:drawableStart="@drawable/ic_password"
+        android:drawableEnd="@drawable/ic_eye"
         android:drawablePadding="10dp"
         android:padding="10dp"
         android:background="@drawable/edit_text"

@@ -22,17 +22,14 @@ class Forum : AppCompatActivity() {
                     startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
-
                 R.id.menu_forum -> {
                     startActivity(Intent(this, Forum::class.java))
                     true
                 }
-
                 R.id.menu_akun -> {
                     startActivity(Intent(this, akun::class.java))
                     true
                 }
-
                 else -> false
             }
         }
