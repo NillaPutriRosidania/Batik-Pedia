@@ -92,9 +92,14 @@ class LoginActivity : AppCompatActivity() {
                 Log.d("response", response.status)
                 withContext(Dispatchers.Main) {
                     if (response.status == "success") {
-                        // Simpan status login dan detail akun ke SharedPreferences menggunakan Preference class
+                        // Save the token in SharedPreferences
+                        preference.setToken(response.token)
+                        // Save login status and user email
                         preference.setUsername(email)
                         preference.setLoggedIn(true)
+
+                        // Fetch user details
+                        fetchUserDetails()
 
                         Toast.makeText(this@LoginActivity, response.message, Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@LoginActivity, HomeActivity::class.java)
@@ -107,6 +112,23 @@ class LoginActivity : AppCompatActivity() {
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
                     Toast.makeText(this@LoginActivity, "Please Input Email and Password", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
+    private fun fetchUserDetails() {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val response = ApiConfig.api.getUserDetails()
+                withContext(Dispatchers.Main) {
+                    val userDetails = response.data
+                    Log.d("UserDetails", "ID: ${userDetails.id}, Name: ${userDetails.nama}, Email: ${userDetails.email}")
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@LoginActivity, "Failed to fetch user details: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Log.e("fetchUserDetails", "Exception: ", e)
                 }
             }
         }

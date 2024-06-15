@@ -10,6 +10,7 @@ class Preference(context: Context) {
     companion object {
         private const val IS_LOGGED_IN = "isLoggedIn"
         private const val USERNAME = "username"
+        private const val TOKEN = "token"
     }
 
     fun setLoggedIn(isLoggedIn: Boolean) {
@@ -30,5 +31,15 @@ class Preference(context: Context) {
 
     fun getUsername(): String? {
         return preferences.getString(USERNAME, null)
+    }
+
+    fun setToken(token: String) {
+        val editor = preferences.edit()
+        editor.putString(TOKEN, token)
+        editor.apply()
+    }
+
+    fun getToken(): String? {
+        return preferences.getString(TOKEN, null)
     }
 }
