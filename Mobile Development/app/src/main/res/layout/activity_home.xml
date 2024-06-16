@@ -9,34 +9,11 @@
     android:background="@color/background_primary"
     tools:context="com.example.capstone.ui.HomeActivity">
 
-    <TextView
-        android:id="@+id/tvCamera"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginEnd="17dp"
-        android:paddingStart="8dp"
-        android:paddingEnd="8dp"
-        android:drawablePadding="140dp"
-        android:background="@drawable/edit_text"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center_vertical"
-        android:text="Identifikasi Jenis Batik"
-        android:textColor="#845304"
-        android:textSize="16sp"
-        app:drawableEndCompat="@drawable/ic_camera"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/tvCamera"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

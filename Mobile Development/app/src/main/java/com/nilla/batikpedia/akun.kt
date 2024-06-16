@@ -3,6 +3,7 @@ package com.nilla.batikpedia
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.capstone.ui.CameraActivity
 import com.example.capstone.ui.HomeActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -22,8 +23,8 @@ class akun : AppCompatActivity() {
                     startActivity(Intent(this, HomeActivity::class.java))
                     true
                 }
-                R.id.menu_forum -> {
-                    startActivity(Intent(this, Forum::class.java))
+                R.id.menu_detect -> {
+                    startActivity(Intent(this, CameraActivity::class.java))
                     true
                 }
                 R.id.menu_akun -> {

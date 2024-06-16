@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, MainActivity::class.java))
                     true
                 }
-                R.id.menu_forum -> {
+                R.id.menu_detect -> {
                     startActivity(Intent(this, Forum::class.java))
                     true
                 }

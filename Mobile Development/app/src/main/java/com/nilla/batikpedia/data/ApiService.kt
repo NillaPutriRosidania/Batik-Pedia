@@ -1,12 +1,20 @@
 package com.nilla.batikpedia.data
 
 import com.nilla.batikpedia.response.LoginResponse
+import com.nilla.batikpedia.response.NewsDetailResponse
+import com.nilla.batikpedia.response.NewsResponse
 import com.nilla.batikpedia.response.RegisterResponse
+import com.nilla.batikpedia.response.UploadData
+import com.nilla.batikpedia.response.UploadResponse
 import com.nilla.batikpedia.response.UserResponse
+import okhttp3.MultipartBody
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Multipart
 import retrofit2.http.POST
+import retrofit2.http.Part
+import retrofit2.http.Path
 
 interface ApiService {
     @FormUrlEncoded
@@ -26,4 +34,14 @@ interface ApiService {
 
     @GET("/api/user")
     suspend fun getUserDetails(): UserResponse
+
+    @GET("/api/news")
+    suspend fun getNews(): NewsResponse
+
+    @GET("/api/news/{id}")
+    suspend fun getNewsDetail(@Path("id") id: String): NewsDetailResponse
+
+    @Multipart
+    @POST("/api/batik/scan")
+    suspend fun uploadPhoto(@Part image: MultipartBody.Part): UploadResponse<UploadData>
 }
