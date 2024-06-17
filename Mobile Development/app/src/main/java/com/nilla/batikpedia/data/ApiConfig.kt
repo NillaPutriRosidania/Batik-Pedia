@@ -15,7 +15,7 @@ object ApiConfig {
         .addInterceptor { chain ->
             val request = chain.request().newBuilder()
             val token = Preference(MyApplication.context).getToken()
-            if (token != null) {
+            token?.let {
                 request.addHeader("Authorization", "Bearer $token")
             }
             chain.proceed(request.build())

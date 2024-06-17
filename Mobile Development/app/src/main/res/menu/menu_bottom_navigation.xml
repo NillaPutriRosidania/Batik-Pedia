@@ -6,9 +6,9 @@
         android:title="Beranda"
         android:background="@drawable/menu_item_bg" />
     <item
-        android:id="@+id/menu_forum"
-        android:icon="@drawable/ic_forum"
-        android:title="Forum"
+        android:id="@+id/menu_detect"
+        android:icon="@drawable/ic_detect"
+        android:title="Deteksi"
         android:background="@drawable/menu_item_bg" />
     <item
         android:id="@+id/menu_akun"
