@@ -1,11 +1,12 @@
-package com.nilla.batikpedia
+package com.nilla.batikpedia.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nilla.batikpedia.R
 
-class UbahFoto : AppCompatActivity() {
+class AboutUs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ubah_foto)
+        setContentView(R.layout.activity_about_us)
     }
 }

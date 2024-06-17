@@ -2,16 +2,14 @@ package com.example.capstone.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.adapter.HomeAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.nilla.batikpedia.Forum
 import com.nilla.batikpedia.R
-import com.nilla.batikpedia.akun
+import com.nilla.batikpedia.ui.AkunActivity
 import com.nilla.batikpedia.data.ApiConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -36,23 +34,34 @@ class HomeActivity : AppCompatActivity() {
         fetchDataFromApi()
 
         bottomNavView = findViewById(R.id.bottomNavigationView)
+        bottomNavView.menu.findItem(R.id.menu_beranda).isChecked = true
         bottomNavView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_beranda -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
+                    if (!isCurrentActivity(HomeActivity::class.java)) {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                    }
                     true
                 }
                 R.id.menu_detect -> {
-                    startActivity(Intent(this, CameraActivity::class.java))
+                    if (!isCurrentActivity(CameraActivity::class.java)) {
+                        startActivity(Intent(this, CameraActivity::class.java))
+                    }
                     true
                 }
                 R.id.menu_akun -> {
-                    startActivity(Intent(this, akun::class.java))
+                    if (!isCurrentActivity(AkunActivity::class.java)) {
+                        startActivity(Intent(this, AkunActivity::class.java))
+                    }
                     true
                 }
                 else -> false
             }
         }
+    }
+
+    private fun isCurrentActivity(activityClass: Class<*>): Boolean {
+        return activityClass.isInstance(this)
     }
 
     private fun fetchDataFromApi() {

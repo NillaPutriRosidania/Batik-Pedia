@@ -94,11 +94,10 @@ class LoginActivity : AppCompatActivity() {
                     if (response.status == "success") {
                         // Save the token in SharedPreferences
                         preference.setToken(response.token)
-                        // Save login status and user email
-                        preference.setUsername(email)
+                        // Save login status
                         preference.setLoggedIn(true)
 
-                        // Fetch user details
+                        // Fetch user details and save to preferences
                         fetchUserDetails()
 
                         Toast.makeText(this@LoginActivity, response.message, Toast.LENGTH_SHORT).show()
@@ -124,6 +123,11 @@ class LoginActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     val userDetails = response.data
                     Log.d("UserDetails", "ID: ${userDetails.id}, Name: ${userDetails.nama}, Email: ${userDetails.email}")
+
+                    // Save user details to preferences
+                    preference.setUsername(userDetails.nama)
+                    preference.setUserEmail(userDetails.email)
+                    preference.setUserPhoto(userDetails.foto)
                 }
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {

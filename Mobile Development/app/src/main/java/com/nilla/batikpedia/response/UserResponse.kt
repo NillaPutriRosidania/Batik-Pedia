@@ -14,3 +14,10 @@ data class UserData(
     val email: String,
     val updatedAt: String
 )
+
+data class UserDataToUpdate(
+    val nama: String?,
+    val email: String?,
+    val password: String?
+)
+

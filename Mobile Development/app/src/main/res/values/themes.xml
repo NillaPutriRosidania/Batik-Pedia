@@ -2,8 +2,13 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.BatikPedia" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/my_light_primary</item>
+        <item name="colorSecondary">@color/my_light_secondary</item>
+        <item name="colorSecondaryVariant">@color/my_light_accent</item>
+        <item name="android:textViewStyle">@style/CustomFontTextView</item>
+        </style>
+    <style name="CustomFontTextView" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/intermedium</item>
     </style>
-
     <style name="Theme.BatikPedia" parent="Base.Theme.BatikPedia" />
 </resources>
