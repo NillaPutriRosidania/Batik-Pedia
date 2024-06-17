@@ -1,7 +1,8 @@
-package com.nilla.batikpedia
+package com.nilla.batikpedia.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.nilla.batikpedia.R
 
 class AboutUs : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

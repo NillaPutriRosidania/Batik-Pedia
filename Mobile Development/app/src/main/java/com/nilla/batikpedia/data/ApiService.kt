@@ -1,11 +1,14 @@
 package com.nilla.batikpedia.data
 
+import com.nilla.batikpedia.response.GenericResponse
 import com.nilla.batikpedia.response.LoginResponse
 import com.nilla.batikpedia.response.RegisterResponse
 import com.nilla.batikpedia.response.UserResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.PATCH
 import retrofit2.http.POST
 
 interface ApiService {
@@ -24,6 +27,12 @@ interface ApiService {
         @Field("password") password: String
     ): LoginResponse
 
-    @GET("/api/user")
-    suspend fun getUserDetails(): UserResponse
+    @PATCH("api/user/update")
+    suspend fun updateUser(
+        @Header("Authorization") token: String,
+        @Field("email") email: String?,
+        @Field("nama") nama: String?,
+        @Field("password") password: String?,
+        @Field("foto") foto: String?
+    ): GenericResponse
 }

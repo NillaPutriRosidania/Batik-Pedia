@@ -1,8 +1,9 @@
-package com.nilla.batikpedia
+package com.nilla.batikpedia.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.nilla.batikpedia.R
 
 class MainActivity : AppCompatActivity() {
 

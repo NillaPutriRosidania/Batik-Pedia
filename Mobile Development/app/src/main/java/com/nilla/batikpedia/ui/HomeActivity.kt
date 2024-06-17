@@ -3,19 +3,15 @@ package com.example.capstone.ui
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.adapter.HomeAdapter
 import com.example.capstone.model.Item
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.nilla.batikpedia.Forum
-import com.nilla.batikpedia.MainActivity
+import com.nilla.batikpedia.ui.Forum
 import com.nilla.batikpedia.R
-import com.nilla.batikpedia.akun
+import com.nilla.batikpedia.ui.akun
 
 class HomeActivity : AppCompatActivity() {
 
