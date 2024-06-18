@@ -30,16 +30,13 @@ class LoginActivity : AppCompatActivity() {
 
         preference = Preference(this)
 
-        // Periksa status login dari SharedPreferences
         if (preference.isLoggedIn()) {
-            // Jika sudah login, arahkan ke HomeActivity
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
             return
         }
 
-        // Inisialisasi tombol login
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val etPassword = findViewById<EditText>(R.id.etPassword)
 

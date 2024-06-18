@@ -13,7 +13,6 @@ class Preference(context: Context) {
         private const val USER_EMAIL = "user_email"
         private const val USER_PHOTO = "user_photo"
         private const val TOKEN = "token"
-        private const val USER_PASSWORD = "user_password"
     }
 
     fun setLoggedIn(isLoggedIn: Boolean) {
