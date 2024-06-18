@@ -25,27 +25,22 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        // Inisialisasi tombol register
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
 
-        // Set onClickListener pada tombol login
         btnRegister.setOnClickListener {
-            // Intent untuk mengarahkan ke LoginActivity
             val nama = findViewById<EditText>(R.id.etName).text.toString()
             val email = findViewById<EditText>(R.id.etEmail).text.toString()
             val password = etPassword.text.toString()
             registerUser(nama, email, password)
         }
 
-        // Set onClickListener pada tombol login
         val btnCreateAccount = findViewById<Button>(R.id.btnLoginRegister)
         btnCreateAccount.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
-        // Handle show/hide password
         etPassword.setOnTouchListener(View.OnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
                 val drawableEnd = etPassword.compoundDrawables[2]
@@ -61,11 +56,9 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun togglePasswordVisibility(editText: EditText) {
         if (isPasswordVisible) {
-            // Show password
             editText.transformationMethod = null
             editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_password, 0, R.drawable.ic_eye_off, 0)
         } else {
-            // Hide password
             editText.transformationMethod = PasswordTransformationMethod.getInstance()
             editText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_password, 0, R.drawable.ic_eye, 0)
         }

@@ -2,16 +2,15 @@ package com.example.capstone.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.adapter.HomeAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.nilla.batikpedia.Forum
 import com.nilla.batikpedia.R
-import com.nilla.batikpedia.akun
 import com.nilla.batikpedia.data.ApiConfig
+import com.nilla.batikpedia.ui.AkunActivity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -46,7 +45,7 @@ class HomeActivity : AppCompatActivity() {
                     true
                 }
                 R.id.menu_akun -> {
-                    startActivity(Intent(this, akun::class.java))
+                    startActivity(Intent(this, AkunActivity::class.java))
                     true
                 }
                 else -> false

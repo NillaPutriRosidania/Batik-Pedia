@@ -10,6 +10,8 @@ class Preference(context: Context) {
     companion object {
         private const val IS_LOGGED_IN = "isLoggedIn"
         private const val USERNAME = "username"
+        private const val USER_EMAIL = "user_email"
+        private const val USER_PHOTO = "user_photo"
         private const val TOKEN = "token"
     }
 
@@ -31,6 +33,26 @@ class Preference(context: Context) {
 
     fun getUsername(): String? {
         return preferences.getString(USERNAME, null)
+    }
+
+    fun setUserEmail(email: String) {
+        val editor = preferences.edit()
+        editor.putString(USER_EMAIL, email)
+        editor.apply()
+    }
+
+    fun getUserEmail(): String? {
+        return preferences.getString(USER_EMAIL, null)
+    }
+
+    fun setUserPhoto(photoUrl: String) {
+        val editor = preferences.edit()
+        editor.putString(USER_PHOTO, photoUrl)
+        editor.apply()
+    }
+
+    fun getUserPhoto(): String? {
+        return preferences.getString(USER_PHOTO, null)
     }
 
     fun setToken(token: String) {

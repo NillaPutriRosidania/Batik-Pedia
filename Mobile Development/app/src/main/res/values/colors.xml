@@ -4,4 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="brown">#845304</color>
     <color name="background_primary">#FFEBC1</color>
+    <color name="my_light_primary">#845304</color>
+    <color name="my_light_secondary">#D7A86E</color>
+    <color name="my_light_accent">#A64B2A</color>
+    <color name="my_bottom_nav_color">#8E3200</color>
+    <color name="my_bottom_nav_color_selected">#845304</color>
 </resources>

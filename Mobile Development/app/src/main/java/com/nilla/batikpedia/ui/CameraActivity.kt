@@ -9,16 +9,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.nilla.batikpedia.R
-import com.nilla.batikpedia.akun
 import com.nilla.batikpedia.data.ApiConfig
 import com.nilla.batikpedia.databinding.ActivityCameraBinding
+import com.nilla.batikpedia.ui.AkunActivity
 import kotlinx.coroutines.launch
-import okhttp3.MediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import java.io.ByteArrayOutputStream
 
-import okhttp3.ResponseBody
 import retrofit2.HttpException
 
 class CameraActivity : AppCompatActivity() {
@@ -45,23 +44,34 @@ class CameraActivity : AppCompatActivity() {
         }
 
         bottomNavView = findViewById(R.id.bottomNavigationView)
+        bottomNavView.menu.findItem(R.id.menu_detect).isChecked = true
         bottomNavView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_beranda -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
+                    if (!isCurrentActivity(HomeActivity::class.java)) {
+                        startActivity(Intent(this, HomeActivity::class.java))
+                    }
                     true
                 }
                 R.id.menu_detect -> {
-                    startActivity(Intent(this, CameraActivity::class.java))
+                    if (!isCurrentActivity(CameraActivity::class.java)) {
+                        startActivity(Intent(this, CameraActivity::class.java))
+                    }
                     true
                 }
                 R.id.menu_akun -> {
-                    startActivity(Intent(this, akun::class.java))
+                    if (!isCurrentActivity(AkunActivity::class.java)) {
+                        startActivity(Intent(this, AkunActivity::class.java))
+                    }
                     true
                 }
                 else -> false
             }
         }
+    }
+
+    private fun isCurrentActivity(activityClass: Class<*>): Boolean {
+        return activityClass.isInstance(this)
     }
 
     private fun openGallery() {
@@ -81,7 +91,7 @@ class CameraActivity : AppCompatActivity() {
             val formatString = if (format == Bitmap.CompressFormat.JPEG) "jpg" else "png"
             bitmap.compress(format, 100, byteArrayOutputStream)
             val byteArray = byteArrayOutputStream.toByteArray()
-            val requestBody = RequestBody.create(MediaType.parse("image/$formatString"), byteArray)
+            val requestBody = RequestBody.create("image/$formatString".toMediaTypeOrNull(), byteArray)
             val body = MultipartBody.Part.createFormData("foto", "photo.$formatString", requestBody)
 
             lifecycleScope.launch {

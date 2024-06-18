@@ -28,7 +28,7 @@ class Forum : AppCompatActivity() {
                     true
                 }
                 R.id.menu_akun -> {
-                    startActivity(Intent(this, akun::class.java))
+                    startActivity(Intent(this, AkunActivity::class.java))
                     true
                 }
                 else -> false
