@@ -7,7 +7,7 @@ data class NewsDetailResponse(
 
 data class NewsDetailItem(
     val id: String,
-    val image: String,
+    val imageUrl: String,
     val body: String,
     val judul: String,
     val timestamp: String

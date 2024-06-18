@@ -8,6 +8,6 @@ data class NewsResponse(
 data class NewsItem(
     val id: String,
     val timestamp: String,
-    val image: String,
+    val imageUrl: String,
     val judul: String
 )

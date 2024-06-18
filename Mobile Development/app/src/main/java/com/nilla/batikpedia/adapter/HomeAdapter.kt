@@ -29,7 +29,7 @@ class HomeAdapter(private var itemList: List<NewsItem>, private val context: Con
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = itemList[position]
         holder.dateTextView.text = currentItem.timestamp
-        Picasso.get().load(currentItem.image).into(holder.imageView)
+        Picasso.get().load(currentItem.imageUrl).into(holder.imageView)
         holder.titleTextView.text = currentItem.judul
 
         holder.itemView.setOnClickListener {

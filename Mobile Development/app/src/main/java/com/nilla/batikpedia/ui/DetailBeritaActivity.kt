@@ -53,7 +53,7 @@ class DetailBeritaActivity : AppCompatActivity() {
                     val news = response.data
                     titleTextView.text = news.judul
                     dateTextView.text = news.timestamp
-                    Picasso.get().load(news.image).into(imageView)
+                    Picasso.get().load(news.imageUrl).into(imageView)
                     bodyTextView.text = news.body
                 } else {
                     Toast.makeText(this@DetailBeritaActivity, "Failed to get news details", Toast.LENGTH_SHORT).show()
