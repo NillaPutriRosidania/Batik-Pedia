@@ -5,8 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD:Mobile Development/app/src/main/res/layout/activity_ubah_profile.xml
     android:background="@color/background_primary"
     tools:context=".ui.UbahProfile">
+=======
+    tools:context=".ui.UbahNama">
+>>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8:Mobile Development/app/src/main/res/layout/activity_ubah_password.xml
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

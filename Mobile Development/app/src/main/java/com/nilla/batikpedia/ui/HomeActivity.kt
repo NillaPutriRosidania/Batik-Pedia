@@ -2,18 +2,35 @@ package com.example.capstone.ui
 
 import android.content.Intent
 import android.os.Bundle
+<<<<<<< HEAD
+=======
+import android.widget.TextView
+<<<<<<< HEAD
+=======
+>>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
 import android.widget.Toast
+>>>>>>> 5909389e6e28522c40d2102fd9aa382e7f79b466
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.adapter.HomeAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import com.nilla.batikpedia.ui.Forum
+import com.nilla.batikpedia.R
+import com.nilla.batikpedia.ui.akun
+=======
+import com.nilla.batikpedia.Forum
+>>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
 import com.nilla.batikpedia.R
 import com.nilla.batikpedia.ui.AkunActivity
 import com.nilla.batikpedia.data.ApiConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+>>>>>>> 5909389e6e28522c40d2102fd9aa382e7f79b466
 
 class HomeActivity : AppCompatActivity() {
 
