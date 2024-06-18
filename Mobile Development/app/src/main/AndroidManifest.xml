@@ -3,10 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-=======
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
 
     <application
         android:name=".preference.MyApplication"
@@ -19,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BatikPedia"
         tools:targetApi="31">
-<<<<<<< HEAD
 
         <activity
             android:name=".ui.SplashScreenActivity"
@@ -38,28 +34,6 @@
             android:exported="false" />
         <activity
             android:name=".ui.AkunActivity"
-=======
-        <activity
-            android:name=".ui.SplashScreen"
-            android:exported="false" />
-        <activity
-            android:name=".ui.Forum"
-            android:exported="false" />
-        <activity
-            android:name=".ui.UbahPassword"
-            android:exported="false" />
-        <activity
-            android:name=".ui.UbahEmail"
-            android:exported="false" />
-        <activity
-            android:name=".ui.UbahNama"
-            android:exported="false" />
-        <activity
-            android:name=".ui.UbahFoto"
-            android:exported="false" />
-        <activity
-            android:name=".ui.akun"
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
             android:exported="false" />
         <activity
             android:name="com.example.capstone.ui.DetailBeritaActivity"
@@ -75,19 +49,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.LoginActivity"
-<<<<<<< HEAD
             android:exported="true" />
         <activity android:name=".ui.AboutUs"
             android:exported="false" />
-=======
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
     </application>
 
 </manifest>

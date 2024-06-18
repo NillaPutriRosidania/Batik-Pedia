@@ -1,8 +1,5 @@
 package com.nilla.batikpedia.data
-<<<<<<< HEAD
-=======
 
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
 import com.nilla.batikpedia.response.GenericResponse
 import com.nilla.batikpedia.response.LoginResponse
 import com.nilla.batikpedia.response.NewsDetailResponse
@@ -13,23 +10,7 @@ import com.nilla.batikpedia.response.UploadResponse
 import com.nilla.batikpedia.response.UserDataToUpdate
 import com.nilla.batikpedia.response.UserResponse
 import okhttp3.MultipartBody
-<<<<<<< HEAD
 import retrofit2.http.*
-=======
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-<<<<<<< HEAD
-import retrofit2.http.Header
-import retrofit2.http.PATCH
-=======
-import retrofit2.http.Multipart
->>>>>>> 5909389e6e28522c40d2102fd9aa382e7f79b466
-import retrofit2.http.POST
-import retrofit2.http.Part
-import retrofit2.http.Path
-
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
 interface ApiService {
 
     @FormUrlEncoded
@@ -47,16 +28,6 @@ interface ApiService {
         @Field("password") password: String
     ): LoginResponse
 
-<<<<<<< HEAD
-    @PATCH("api/user/update")
-    suspend fun updateUser(
-        @Header("Authorization") token: String,
-        @Field("email") email: String?,
-        @Field("nama") nama: String?,
-        @Field("password") password: String?,
-        @Field("foto") foto: String?
-    ): GenericResponse
-=======
     @GET("/api/user")
     suspend fun getUserDetails(): UserResponse
 
@@ -69,7 +40,6 @@ interface ApiService {
     @Multipart
     @POST("/api/batik/scan")
     suspend fun uploadPhoto(@Part image: MultipartBody.Part): UploadResponse<UploadData>
-<<<<<<< HEAD
 
     @Multipart
     @PATCH ("/api/user/update")
@@ -85,7 +55,3 @@ interface ApiService {
         @Body userData: UserDataToUpdate
     ): GenericResponse
 }
-=======
->>>>>>> 5909389e6e28522c40d2102fd9aa382e7f79b466
-}
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8

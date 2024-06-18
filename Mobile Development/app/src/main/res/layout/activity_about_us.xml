@@ -2,14 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@color/background_primary"
-=======
->>>>>>> 929ce59e946fb9d498d6255df2c6e851eb8a67b8
-    tools:context=".ui.AboutUs">
+    android:background="@color/background_primary">
 
     <TextView
         android:id="@+id/textView"
